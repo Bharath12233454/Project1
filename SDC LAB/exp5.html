@@ -1,0 +1,31 @@
+Register.jsp:
+<%@pagelanguage="java"import="java.sql.*,javax.servlet.*"%>
+<html>
+<form.
+<%
+String         v1,v2,v3,v4,str'
+v1=request.getParameter
+("t1");
+v2=request.getParameter
+("t2");
+v3=request.getParameter
+("t3");
+v4=request.getParameter
+("t4");
+try{
+Class.forName("Sun.Jdbc.odbc.jdbcDriver");
+Connection
+cn=DriverManager.getConnection(jdbc:odbc:oradsn","system","ravindra");Statement st=cn.createStatement();
+st.executeUpdate("insertiontoregistervalues("'+v1+"',"'+v2+"',"+v3+",""+v4+"')");if(cn!=null)
+{
+out.println("Registrationfailed");
+}
+st.close();
+cn.close();
+}catch(Exceptione){out.println("Registerationfailed");
+%>
+<p><ahref="reg.html"target=f2><B>Back<B></a>
+<%
+}
+%>
+</body></html>
